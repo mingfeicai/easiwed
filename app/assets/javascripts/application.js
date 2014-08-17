@@ -17,8 +17,6 @@
 //= require handlebars
 //= require ember
 //= require ember-data
-//= require typeahead.bundle
-//= require ember-typeahead
 //= require_self
 //= require easiwed
 //= require showdown
