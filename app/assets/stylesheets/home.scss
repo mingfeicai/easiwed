@@ -4,7 +4,7 @@
 		position: absolute;
 		right: 0;
 		left: 0;
-		top: 0;
+		top: 50px;
 		height: 550px;
 		overflow: hidden;
 		min-width: 1045px;
@@ -16,34 +16,42 @@
 	}
 	.middle-slogan{
 		margin-top: 150px;
+		height: 100px;
+		margin-bottom: 195px;
 		text-align: center;
-		font-size: 400% ;
+		font-size: 350% ;
 		color: #FFFFFF;
-		text-transform: uppercase;
 	}
 	.search-bar-container{
 		background-color: rgba(0,0,0,0.4);
 		height:105px;
 		width:100%;
-		position: absolute;
-		top:445px;
+		padding: 30px 0 30px 0;
 		.search-bar{
-			margin: 30px auto 30px auto;
+			margin: 0 auto 0 auto;
 			width: 600px;
 			.wedding-date{
 				height: 45px;
 				padding-left: 5px;
 				vertical-align: bottom;
+				margin-right: -1px;
+				margin-left: -1px;
+
 			}
 			.wedding-area{
 				height: 45px;
 				padding-left: 5px;
 				vertical-align: bottom;
+				margin-right: -1px;
+				margin-left: -1px;
+
 			}
 			.guest-count{
 				height: 45px;
 				padding-left: 5px;
 				vertical-align: bottom;
+				margin-right: -1px;
+				margin-left: -1px;
 			}
 			.search-button{
 				height: 45px;
@@ -52,7 +60,28 @@
 				vertical-align: bottom;
 				border: 0px;
 				width: 100px;
+				margin-right: -1px;
+				margin-left: -1px;
+
 			}
 		}
 	}
+	.main-back-ground{
+		background-color: #efefef;
+		padding: 30px 0 50px 0;
+		.main-title{
+			margin-bottom: 30px;
+			text-align: center;
+			color: #999999;
+			font-size: 200%;
+		}
+		.popular-spot-container {
+			width: 1045px;
+			margin: auto;
+			.spot-row-container {
+				padding-bottom: 20px;
+			}
+		}
+	}
+
 }
