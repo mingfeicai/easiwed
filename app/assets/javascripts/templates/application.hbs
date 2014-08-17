@@ -1,29 +1,3 @@
-<div class = "home">
-	<div class="header-video-container">
-		<video autoplay="autoplay" loop="loop" preload="auto" id="pretzel-video" class="header-video">
-			<source src="//a0.muscache.com/airbnb/static/Paris-P1-1.mp4" type="video/mp4">
-			<source src="//a0.muscache.com/airbnb/static/Paris-P1-0.webm" type="video/webm">
-		</video>
-	</div>
-	<div class="navbar navbar-inverse">
-		<div class="navbar-header">
-			{{#link-to 'index' class='navbar-brand'}} Easiwed {{/link-to}}
-		</div>
-		<div class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-			<li>{{#link-to 'posts'}}Posts{{/link-to}}</li>
-			<li>{{#link-to 'about'}}About{{/link-to}}</li>
-			</ul>
-		</div>
-	</div>
-	<div class="middle-slogan">find perfect venue</div>
-	<div class="search-bar-container">
-		<div class = "row search-bar">
-			<input class="span3 wedding-date" placeholder="wedding date"/>
-			<input class="span3 wedding-area" placeholder="wedding area"/>
-			<input class="span3 guest-count" placeholder="guest count"/>
-			<button class="span3 search-button">Search</button>
-		</div>
-	</div>
+<div>
 	{{outlet}}
 </div>
