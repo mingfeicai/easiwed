@@ -28,23 +28,10 @@
 	<div class = "main-back-ground">
 		<div class ="main-title strong upper">popular wedding spot</div>
 		<div class="popular-spot-container">
-			<div class="row spot-row-container">
-				<div class="col-md-4">{{small-pop-dest}}</div>
-				<div class="col-md-4">{{small-pop-dest}}</div>
-				<div class="col-md-4">{{small-pop-dest}}</div>
-			</div>
-			<div class="row spot-row-container">
-				<div class="col-md-8">{{mid-pop-dest}}</div>
-				<div class="col-md-4">{{small-pop-dest}}</div>
-			</div>
-			<div class="row spot-row-container">
-				<div class="col-md-4">{{small-pop-dest}}</div>
-				<div class="col-md-4">{{small-pop-dest}}</div>
-				<div class="col-md-4">{{small-pop-dest}}</div>
-			</div>
-			<div class="row spot-row-container">
-				<div class="col-md-4">{{small-pop-dest}}</div>
-				<div class="col-md-8">{{mid-pop-dest}}</div>
+			<div class="row">
+				{{#each destinations}}
+					<div class="col-md-4 spot-row-container">{{small-pop-dest destination = this}}</div>
+				{{/each}}
 			</div>
 		</div>
 	</div>

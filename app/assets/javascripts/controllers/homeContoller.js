@@ -1,7 +1,7 @@
 Easiwed.HomeController = Ember.ObjectController.extend({
 	actions: {
-		delete: function (params) {
-			this.store.find('post', params.id).then(function (post) {
+		delete: function () {
+			this.store.find('posdt').then(function (post) {
 				post.destroyRecord();
 			});
 		}

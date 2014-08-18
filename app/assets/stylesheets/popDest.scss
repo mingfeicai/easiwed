@@ -1,7 +1,9 @@
 .small-pop-dest-container {
-	background: url("https://s3.amazonaws.com/easiwed/pic/DowntownSF.jpg") no-repeat;
-	height: 350px;
-	width: 350px;
+	.pic-container{
+		background: url("https://s3.amazonaws.com/easiwed/pic/Napa.jpeg") no-repeat;
+		height: 350px;
+		width: 350px;
+	}
 	.destination-title{
 		font-size: 210% ;
 		color: #FFFFFF;
@@ -10,7 +12,6 @@
 	}
 }
 .mid-pop-dest-container {
-	background: url("https://s3.amazonaws.com/easiwed/pic/Napa.jpeg") no-repeat;
 	height: 350px;
 	width: 700px;
 	.destination-title{

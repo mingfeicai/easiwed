@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140807061452) do
+ActiveRecord::Schema.define(version: 20140817204229) do
+
+  create_table "destinations", force: true do |t|
+    t.string   "name"
+    t.string   "country"
+    t.string   "currency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "images", force: true do |t|
+    t.string   "imageable_type"
+    t.integer  "imageable_id"
+    t.string   "small"
+    t.string   "medium"
+    t.string   "large"
+    t.string   "distribution"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "images", ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id", unique: true, using: :btree
 
   create_table "posts", force: true do |t|
     t.string   "title"

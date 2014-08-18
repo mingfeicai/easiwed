@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  entityType: MyString
+  entityId: 1
+  small: MyString
+  medium: MyString
+  large: MyString
+  distribution: MyString
+
+two:
+  entityType: MyString
+  entityId: 1
+  small: MyString
+  medium: MyString
+  large: MyString
+  distribution: MyString

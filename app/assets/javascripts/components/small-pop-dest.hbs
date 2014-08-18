@@ -1,7 +1,11 @@
 <div class="small-pop-dest-container">
-	<div class="pic-container">
-	</div>
-	<div class="destination-title upper strong">
-		San Francisco
-	</div>
+	{{#with destination}}
+		{{#each images}}
+			<div class="pic-container" style="background: url({{small}}) no-repeat">
+			</div>
+		{{/each}}
+		<div class="destination-title upper strong">
+			{{name}}
+		</div>
+	{{/with}}
 </div>
