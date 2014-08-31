@@ -1,0 +1,21 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-5">
+			<div>All Problems</div>
+			+++++++++++++++++++++++++++++++
+			<div>
+				{{#each filteredProblems}}
+					<div>{{#link-to 'problem' this}}{{title}}{{/link-to}}
+					</div>
+					<div>
+						{{description}}
+					</div>
+					--------------------------------
+				{{/each}}
+			</div>
+		</div>
+		<div class="col-md-7">
+			{{outlet}}
+		</div>
+	</div>
+</div>

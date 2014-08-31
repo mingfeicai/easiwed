@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140817204229) do
+ActiveRecord::Schema.define(version: 20140830071039) do
+
+  create_table "api_keys", force: true do |t|
+    t.integer  "user_id"
+    t.string   "access_token"
+    t.string   "scope"
+    t.datetime "expired_at"
+    t.datetime "created_at"
+  end
+
+  add_index "api_keys", ["access_token"], name: "index_api_keys_on_access_token", unique: true, using: :btree
+  add_index "api_keys", ["user_id"], name: "index_api_keys_on_user_id", using: :btree
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "companies", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "destinations", force: true do |t|
     t.string   "name"
@@ -32,8 +55,6 @@ ActiveRecord::Schema.define(version: 20140817204229) do
     t.datetime "updated_at"
   end
 
-  add_index "images", ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id", unique: true, using: :btree
-
   create_table "posts", force: true do |t|
     t.string   "title"
     t.string   "author"
@@ -41,5 +62,31 @@ ActiveRecord::Schema.define(version: 20140817204229) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "problems", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "category_id"
+    t.integer  "challenge"
+    t.integer  "company_id"
+    t.text     "answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "problems", ["category_id"], name: "index_problems_on_category_id", using: :btree
+  add_index "problems", ["company_id"], name: "index_problems_on_company_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "username"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 end

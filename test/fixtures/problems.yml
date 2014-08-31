@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  catetory_id: 
+  challenge: 1
+  company_id: 
+  answer: MyText
+
+two:
+  title: MyString
+  description: MyText
+  catetory_id: 
+  challenge: 1
+  company_id: 
+  answer: MyText

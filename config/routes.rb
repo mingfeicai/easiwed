@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :problems
+  resources :categories
   get 'posts/index'
 
   get 'posts/create'
