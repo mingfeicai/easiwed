@@ -1,0 +1,36 @@
+<div class="problem-list-item" >
+	{{#with problem}}
+		{{#link-to 'problem' this}}
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2 challenge-square">
+					<div class="strong upper title">
+						level
+					</div>
+					<div class="strong upper level">
+						{{challenge}}
+					</div>
+					<div class="upper out-of">
+						out of 5
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="upper strong problem-title">
+						{{title}}
+					</div>
+					<div class="problem-short-description multi-line-text-box">
+						{{description}}
+					</div>
+				</div>
+				<div class="col-md-1">
+					{{#each tags}}
+						<div class="tag-item">
+							{{name}}
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+		{{/link-to}}
+	{{/with}}
+</div>

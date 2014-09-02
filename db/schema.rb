@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140830071039) do
+ActiveRecord::Schema.define(version: 20140901015240) do
 
   create_table "api_keys", force: true do |t|
     t.integer  "user_id"
@@ -32,14 +32,6 @@ ActiveRecord::Schema.define(version: 20140830071039) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "destinations", force: true do |t|
-    t.string   "name"
-    t.string   "country"
-    t.string   "currency"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -76,6 +68,17 @@ ActiveRecord::Schema.define(version: 20140830071039) do
 
   add_index "problems", ["category_id"], name: "index_problems_on_category_id", using: :btree
   add_index "problems", ["company_id"], name: "index_problems_on_company_id", using: :btree
+
+  create_table "problems_tags", id: false, force: true do |t|
+    t.integer "problem_id"
+    t.integer "tag_id"
+  end
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

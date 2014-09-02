@@ -5,12 +5,7 @@
 			+++++++++++++++++++++++++++++++
 			<div>
 				{{#each filteredProblems}}
-					<div>{{#link-to 'problem' this}}{{title}}{{/link-to}}
-					</div>
-					<div>
-						{{description}}
-					</div>
-					--------------------------------
+					{{problem-list-item problem = this}}
 				{{/each}}
 			</div>
 		</div>
