@@ -2,8 +2,7 @@
 
 Easiwed.ProblemListController = Ember.Controller.extend({
 	problemsPerPage: 5,
-	queryParams: ['topics'],
-	queryParams: ['page'],
+	queryParams: ['topics', 'page'],
 	topics: null,
 	page: null,
 
