@@ -9,9 +9,10 @@
 				{{/each}}
 			</div>
 			<ul class="pagination ">
+
 				<li><a href="#">&laquo;</a></li>
 				{{#each pages}}
-					<li>{{#link-to 'problem-list.index'}}{{this}}{{/link-to}}</li>
+					<li>{{#link-to 'problem-list' (query-params topics='coding' page=this ) }}{{this}}{{/link-to}}</li>
 				{{/each}}
 				<li><a href="#">&raquo;</a></li>
 			</ul>
