@@ -4,10 +4,17 @@
 			<div>All Problems</div>
 			+++++++++++++++++++++++++++++++
 			<div>
-				{{#each filteredProblems}}
+				{{#each problemsOnCurrentPage}}
 					{{problem-list-item problem = this}}
 				{{/each}}
 			</div>
+			<ul class="pagination ">
+				<li><a href="#">&laquo;</a></li>
+				{{#each pages}}
+					<li>{{#link-to 'problem-list.index'}}{{this}}{{/link-to}}</li>
+				{{/each}}
+				<li><a href="#">&raquo;</a></li>
+			</ul>
 		</div>
 		<div class="col-md-7">
 			{{outlet}}
