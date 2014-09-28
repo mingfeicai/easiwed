@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scheduled: 2014-09-28 11:42:43
+  tour_id: 
+  tourist_id: 
+  status: MyString
+
+two:
+  scheduled: 2014-09-28 11:42:43
+  tour_id: 
+  tourist_id: 
+  status: MyString

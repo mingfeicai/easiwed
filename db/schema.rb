@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140901015240) do
+ActiveRecord::Schema.define(version: 20140928190419) do
 
   create_table "api_keys", force: true do |t|
     t.integer  "user_id"
@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(version: 20140901015240) do
     t.datetime "updated_at"
   end
 
+  create_table "guides", force: true do |t|
+    t.string   "name"
+    t.string   "street1"
+    t.string   "street2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "images", force: true do |t|
     t.string   "imageable_type"
     t.integer  "imageable_id"
@@ -43,6 +55,18 @@ ActiveRecord::Schema.define(version: 20140901015240) do
     t.string   "medium"
     t.string   "large"
     t.string   "distribution"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "places", force: true do |t|
+    t.string   "name"
+    t.string   "street1"
+    t.string   "street2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -79,6 +103,37 @@ ActiveRecord::Schema.define(version: 20140901015240) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "tourists", force: true do |t|
+    t.string   "name"
+    t.integer  "partySize"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tours", force: true do |t|
+    t.string   "name"
+    t.integer  "durationMinutes"
+    t.integer  "guide_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "place_id"
+  end
+
+  add_index "tours", ["guide_id"], name: "index_tours_on_guide_id", using: :btree
+  add_index "tours", ["place_id"], name: "index_tours_on_place_id", using: :btree
+
+  create_table "trips", force: true do |t|
+    t.datetime "scheduled"
+    t.integer  "tour_id"
+    t.integer  "tourist_id"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "trips", ["tour_id"], name: "index_trips_on_tour_id", using: :btree
+  add_index "trips", ["tourist_id"], name: "index_trips_on_tourist_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"

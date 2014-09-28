@@ -11,4 +11,8 @@ Easiwed.Router.map(function() {
 		this.resource('post', { path: ':id' });
 		this.route('new');
 	});
+	this.resource('tours', function() {
+		this.resource('tour', { path: ':id' });
+		this.route('new');
+	});
 });

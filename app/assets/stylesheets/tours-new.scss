@@ -1,0 +1,19 @@
+@import "shared";
+.title-bar {
+	height: 200px;
+	padding: 20px;
+	color: $dark-grey;
+	.title{
+		font-size: 32px;
+		text-align: center;
+		margin: 30px auto 20px auto;
+	}
+	.sub-title {
+		font-size: 16px;
+		text-align: center;
+	}
+}
+.quick-param-box {
+	background-color: $light-grey;
+	height: 531px;
+}
