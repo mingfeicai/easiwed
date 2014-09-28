@@ -1,9 +1,33 @@
 <div class="container-fluid">
 	<div class="row">
+		<div {{bind-attr class=":row :problem-list-filter isFilterPaneOpen:filter-pane-open:filter-pane-close"}}>
+			{{#if isFilterPaneOpen}}
+				<div class="col-md-6 col-md-offset-3">
+					<div class="row">
+						<div class="col-md-3">
+							Topics:
+						</div>
+						<div class="row col-md-9">
+							{{#each model.categories}}
+								<div class="col-md-4">
+									{{input type="checkbox" checked=isAdmin}}{{name}}
+								</div>
+							{{/each}}
+						</div>
+					</div>
+					<button {{action 'closeFilterPane'}} class="find-problems-button upper">find Problems</button>
+				</div>
+
+			{{else}}
+				<button {{action 'openFilterPane'}} class="more-filter-bu
+				tton upper">more filters</button>
+				{{#each filters}}
+					<span class="filter">{{this}}</span>
+				{{/each}}
+			{{/if}}
+		</div>
 		<div class="col-md-5">
-			<div>All Problems</div>
-			+++++++++++++++++++++++++++++++
-			<div>
+			<div class = "problem-pane">
 				{{#each problemsOnCurrentPage}}
 					{{problem-list-item problem = this}}
 				{{/each}}

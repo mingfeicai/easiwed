@@ -1,4 +1,7 @@
-
+.navbar {
+	border-radius: 0px !important;
+	margin-bottom: 0px !important;
+}
 .strong{
 	font-weight: bold;
 }
@@ -18,3 +21,10 @@ $lines-to-show: 4;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+
+//colors:
+$theme-primary-color: #82B647;
+$theme-secondary-color: #909090;
+$dark-grey: #555555;
+$shadow: #888888;
+$white: #FFFFFF;
